@@ -1,8 +1,7 @@
-import React, { useContext,useCallback, useState } from "react"
+import React, { useContext,useCallback, useState, useEffect  } from "react"
 import Select from "./select/Select"
 import FilterContext from "./../../../../states/filter/Context"
 import * as FilterActions from "./../../../../states/filter/actions"
-import { useEffect } from "react/cjs/react.development"
 import styles from "./footer.module.css"
 function Footer(){
     const {filter,filterDispacth} = useContext(FilterContext)    
