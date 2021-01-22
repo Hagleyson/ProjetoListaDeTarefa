@@ -2,7 +2,7 @@ import React, { useState,useCallback } from "react"
 import styles from "./content.module.css"
 import {ReactComponent as UpdateTitleIcon} from "../../../../../assets/icons/update-icon.svg"
 import {ReactComponent as DeleteTitleIcon} from "../../../../../assets/icons/delete-icon.svg"
-import { useEffect } from "react/cjs/react.development"
+//import { useEffect } from "react/cjs/react.development"
 function Content({title,id,handleRemove,handleStatus,statuss,handleModal}){
     const [isChecked,setIsChecked] = useState(statuss)
     const handleChange= useCallback((e)=>{
