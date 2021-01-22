@@ -8,7 +8,7 @@ function Content({title,id,handleRemove,handleStatus,statuss,handleModal}){
     const handleChange= useCallback((e)=>{
         setIsChecked(e.target.checked)
         handleStatus(id, isChecked)
-    },[setIsChecked])
+    },[setIsChecked, isChecked, id, handleStatus])
     /*useEffect(()=>{        
         handleStatus(id,isChecked)
     },[id, isChecked,handleStatus])*/
