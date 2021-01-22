@@ -9,7 +9,7 @@ function Content({title,id,handleRemove,handleStatus,statuss,handleModal}){
         handleStatus(id, isChecked)
         setIsChecked(e.target.checked)        
     },[setIsChecked, isChecked, id, handleStatus])
-    /*useEffect(()=>{        
+    /*useEffect(()=>{        .
         handleStatus(id,isChecked)
     },[id, isChecked,handleStatus])*/
     return(
