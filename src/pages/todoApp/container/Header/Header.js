@@ -16,10 +16,9 @@ function Header (){
         validationSchema:yup.object({
             title:yup.string().required("Digite uma tarefa")
         }),
-        onSubmit(value){            
+        onSubmit: value=> {            
             dispacth(todoAction.create(value.title))            
         }   
-
     })
     //referenciando
     const inpuTitle = useRef(null)
