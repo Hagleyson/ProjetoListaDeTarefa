@@ -16,9 +16,10 @@ function Header (){
         validationSchema:yup.object({
             title:yup.string().required("Digite uma tarefa")
         }),
-        onSubmit: value=> {            
-            dispacth(todoAction.create(value.title))            
-        }   
+        onSubmit: (values, formikBag) => {
+            dispacth(todoAction.create(values.title))
+            formikBag.setFieldValue('title', '', false)
+        }
     })
     //referenciando
     const inpuTitle = useRef(null)
