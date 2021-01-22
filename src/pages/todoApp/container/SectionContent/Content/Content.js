@@ -8,9 +8,9 @@ function Content({title,id,handleRemove,handleStatus,statuss,handleModal}){
     const handleChange= useCallback((e)=>{
         setIsChecked(e.target.checked)
     },[setIsChecked])
-    useEffect(()=>{        
+    /*useEffect(()=>{        
         handleStatus(id,isChecked)
-    },[id, isChecked,handleStatus])
+    },[id, isChecked,handleStatus])*/
     return(
         <>
         <div className={styles.containerList}>
