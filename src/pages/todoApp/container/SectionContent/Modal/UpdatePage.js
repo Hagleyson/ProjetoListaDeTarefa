@@ -1,5 +1,4 @@
-import React from "react"
-import { useEffect,useRef } from "react/cjs/react.development"
+import React, {useEffect, useRef} from "react"
 import {useFormik} from "formik"
 import {ReactComponent as Closed} from "../../../../../assets/icons/delete-icon.svg"
 import * as yup from "yup"
