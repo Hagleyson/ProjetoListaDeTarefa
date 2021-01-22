@@ -11,7 +11,7 @@ function Content({title,id,handleRemove,handleStatus,statuss,handleModal}){
 
     useEffect(()=>{
         handleStatus(id,isChecked)
-    },[id, isChecked])
+    },[handleStatus, id, isChecked])
     return(
         <>
         <div className={styles.containerList}>
