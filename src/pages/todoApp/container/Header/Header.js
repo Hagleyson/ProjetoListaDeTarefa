@@ -16,8 +16,7 @@ function Header (){
         validationSchema:yup.object({
             title:yup.string().required("Digite uma tarefa")
         }),
-        onSubmit(value,formikBag){
-            formikBag.setFieldValue("title",'',false)
+        onSubmit(value){            
             dispacth(todoAction.create(value.title))            
         }   
 
