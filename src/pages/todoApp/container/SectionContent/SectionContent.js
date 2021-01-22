@@ -2,10 +2,10 @@ import React,{ useContext,useCallback, useState } from "react"
 import TodoContext from "./../../../../states/todos/Context"
 import Content from "./Content/Content"
 import * as todoAction from "./../../../../states/todos/actions"
-import UpdatePage from "./Modal/UpdatePage"/*
-import FilterContext from "./../../../../states/filter/Context" */
+import UpdatePage from "./Modal/UpdatePage"
+import FilterContext from "./../../../../states/filter/Context" 
 import styles from "./sectionContent.module.css"
-/*
+
 function filterContent(todo,curFilter){
     switch (curFilter) {
         case 'all':
@@ -42,13 +42,13 @@ function SectionContent(){
     const handleUpdate = useCallback((id,title)=>{        
         dispacth(todoAction.update(id,title))
     },[dispacth])
-    //const {filter} = useContext(FilterContext)
+    const {filter} = useContext(FilterContext)
     
     return (
         <section className={styles.sectionC}>
             <h1>Atividades</h1>            
             <ul>
-                { todo.map((todoCur)=>{
+                { filterContent(todo,filter).map((todoCur)=>{
                         return (
                             <li key={todoCur.id}>
                             <Content 
