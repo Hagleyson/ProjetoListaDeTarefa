@@ -27,8 +27,8 @@ function SectionContent(){
     const handleApagar = useCallback((id)=>{
         dispacth(todoAction.remove(id))
     },[dispacth])    
-    const handleStatus = useCallback((id,status)=>{
-        dispacth(todoAction.status(id,status))        
+    const handleStatus = useCallback((i,s)=>{
+        dispacth(todoAction.status(i,s))        
     },[dispacth])
     const [curId,setCurId] = useState(null)
     const [title,setTitle] = useState(null)
