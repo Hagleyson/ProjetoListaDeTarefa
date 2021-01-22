@@ -7,6 +7,7 @@ function Content({title,id,handleRemove,handleStatus,statuss,handleModal}){
     const [isChecked,setIsChecked] = useState(statuss)
     const handleChange= useCallback((e)=>{
         setIsChecked(e.target.checked)
+        handleStatus(id, isChecked)
     },[setIsChecked])
     /*useEffect(()=>{        
         handleStatus(id,isChecked)
