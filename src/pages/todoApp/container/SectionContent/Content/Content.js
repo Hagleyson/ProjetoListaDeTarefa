@@ -6,8 +6,8 @@ import {ReactComponent as DeleteTitleIcon} from "../../../../../assets/icons/del
 function Content({title,id,handleRemove,handleStatus,statuss,handleModal}){
     const [isChecked,setIsChecked] = useState(statuss)
     const handleChange= useCallback((e)=>{
-        setIsChecked(e.target.checked)
         handleStatus(id, isChecked)
+        setIsChecked(e.target.checked)        
     },[setIsChecked, isChecked, id, handleStatus])
     /*useEffect(()=>{        
         handleStatus(id,isChecked)
