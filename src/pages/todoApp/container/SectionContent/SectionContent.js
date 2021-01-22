@@ -27,7 +27,7 @@ function SectionContent(){
     const handleApagar = useCallback((id)=>{
         dispacth(todoAction.remove(id))
     },[dispacth])    
-    const handleStatus = useCallback((i,s)=>{
+    const handleS = useCallback((i,s)=>{
         dispacth(todoAction.status(i,s))        
     },[dispacth])
     const [curId,setCurId] = useState(null)
@@ -56,7 +56,7 @@ function SectionContent(){
                                 title={todo.title}   
                                 status={todo.status}                     
                                 handleRemove={()=>{handleApagar(todo.id)}}
-                                handleStatus={handleStatus}
+                                handleStatus={handleS}
                                 handleModal={()=>{openModal(todo.id,todo.title)}}                        
                             />  
                             </li>       
