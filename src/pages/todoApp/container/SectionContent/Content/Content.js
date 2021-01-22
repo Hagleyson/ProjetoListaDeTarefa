@@ -1,17 +1,17 @@
-import React, { useState,useCallback } from "react"
+import React, { useState, useCallback, useEffect } from "react"
 import styles from "./content.module.css"
 import {ReactComponent as UpdateTitleIcon} from "../../../../../assets/icons/update-icon.svg"
 import {ReactComponent as DeleteTitleIcon} from "../../../../../assets/icons/delete-icon.svg"
-//import { useEffect } from "react/cjs/react.development"
+
 function Content({title,id,handleRemove,handleStatus,statuss,handleModal}){
     const [isChecked,setIsChecked] = useState(statuss)
     const handleChange= useCallback((e)=>{
-        handleStatus(id, isChecked)
         setIsChecked(e.target.checked)        
-    },[setIsChecked, isChecked, id, handleStatus])
-    /*useEffect(()=>{        .
+    },[setIsChecked])
+
+    useEffect(()=>{
         handleStatus(id,isChecked)
-    },[id, isChecked,handleStatus])*/
+    },[id, isChecked])
     return(
         <>
         <div className={styles.containerList}>
