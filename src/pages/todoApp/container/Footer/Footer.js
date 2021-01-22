@@ -10,8 +10,8 @@ function Footer(){
         setSelectValue(e.target.value)
     },[setSelectValue])
 
-    const updateFilter = useCallback((filter)=>{
-        filterDispacth(FilterActions.change(filter))
+    const updateFilter = useCallback((filtered)=>{
+        filterDispacth(FilterActions.change(filtered))
     },[filterDispacth])
 
     useEffect(()=>{        
