@@ -3,8 +3,8 @@ import styles from "./content.module.css"
 import {ReactComponent as UpdateTitleIcon} from "../../../../../assets/icons/update-icon.svg"
 import {ReactComponent as DeleteTitleIcon} from "../../../../../assets/icons/delete-icon.svg"
 import { useEffect } from "react/cjs/react.development"
-function Content({title,id,handleRemove,handleStatus,status,handleModal}){
-    const [isChecked,setIsChecked] = useState(status)
+function Content({title,id,handleRemove,handleStatus,statuss,handleModal}){
+    const [isChecked,setIsChecked] = useState(statuss)
     const handleChange= useCallback((e)=>{
         setIsChecked(e.target.checked)
     },[setIsChecked])
@@ -15,7 +15,7 @@ function Content({title,id,handleRemove,handleStatus,status,handleModal}){
         <>
         <div className={styles.containerList}>
             <div className={styles.title}>
-                <span className={status ? styles.color:styles.false} >{title}</span>
+                <span className={statuss ? styles.color:styles.false} >{title}</span>
             </div >
             <div className={styles.icon}>
                 <button onClick={handleRemove}><DeleteTitleIcon/></button>

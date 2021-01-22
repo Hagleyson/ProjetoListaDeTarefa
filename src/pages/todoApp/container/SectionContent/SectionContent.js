@@ -54,7 +54,7 @@ function SectionContent(){
                             <Content 
                                 id={todo.id}
                                 title={todo.title}   
-                                status={todo.status}                     
+                                statuss={todo.status}                     
                                 handleRemove={()=>{handleApagar(todo.id)}}
                                 handleStatus={handleS}
                                 handleModal={()=>{openModal(todo.id,todo.title)}}                        
