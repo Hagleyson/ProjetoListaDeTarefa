@@ -21,7 +21,7 @@ function filterContent(todo,curFilter){
         default: 
             throw new Error()
     }
-}*/
+}
 function SectionContent(){
     const {todo,dispacth} = useContext(TodoContext)
     const handleApagar = useCallback((id)=>{
