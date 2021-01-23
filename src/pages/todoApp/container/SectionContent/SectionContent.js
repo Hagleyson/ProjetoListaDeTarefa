@@ -1,4 +1,4 @@
-import React,{ useContext,useCallback, useState } from "react"
+import React,{ useContext,useCallback, useState,useEffect } from "react"
 import TodoContext from "./../../../../states/todos/Context"
 import Content from "./Content/Content"
 import * as todoAction from "./../../../../states/todos/actions"
@@ -43,7 +43,9 @@ function SectionContent(){
         dispacth(todoAction.update(id,title))
     },[dispacth])
     const {filter} = useContext(FilterContext)
-    
+    useEffect(() => {
+        localStorage.setItem("todoState", JSON.stringify(todo));
+      }, [todo]);
     return (
         <section className={styles.sectionC}>
             <h1>Atividades</h1>            
